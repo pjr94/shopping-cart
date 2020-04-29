@@ -5,7 +5,7 @@ import './App.css';
 // import ReactDOM from 'react-dom';
 import Checkbox from 'rc-checkbox';
 import 'rc-checkbox/assets/index.css';
-// https://react-component.github.io/checkbox/examples/simple.html
+// https://www.npmjs.com/package/rc-checkbox
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 // https://react-component.github.io/slider/
@@ -251,13 +251,20 @@ const deleteItem = (index) => {
   setCartState(newState);
 };
 
+  let total = 0;
+  for (let i = 0; i < cartState.length; i++){
+    total = total + cartState[i].prod.price;
+  }
+
   return (
     <div className="cart">
       <Collapsible trigger="View Cart" overflowWhenOpen="auto">
+        <p>Total: £{total}</p>
         {cartState.map((item, index) => (
           <p>
             {item.prod.name} {item.prod.size[item.sizeNo]} {' '}
-            <button className="delete" onClick={() => deleteItem(index)}>x</button>
+            <button className="delete" onClick={() => deleteItem(index)}>x</button>{' '}
+            £{item.prod.price}
           </p>
           
         ))}
