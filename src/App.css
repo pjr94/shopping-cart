@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.filters{
+  display: block;
+  padding-left: 5px;
+  width: 100px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.product-table{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.product-card{
+  text-align: center;
+  width: 200px;
+}
+
+.product-card h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.board-pic{
+  width: 150px;
+}
+
+.price{
+  font-style: italic;
+}
+
+
+.size-selected{
+  background-color: rgb(94, 191, 255);
+  border: 1px solid black;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.not-selected{
+  background-color: white;
+  border: 1px solid black;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.cart{
+  float: right;
+  text-align: left;
+  width: 200px;
+  right: 0;
+  position: fixed;
+  padding: 5px;
+  background-color: white;
+}
+
+.add-cart{
+  background-color: rgb(226, 210, 115);
+  border: none;
+  padding: 5px 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Collapsible__trigger{
+  font-weight: bold;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  cursor: pointer;
+}
+
+.range-slider{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.delete{
+  cursor: pointer;
+  
 }
