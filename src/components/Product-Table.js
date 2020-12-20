@@ -54,6 +54,8 @@ export default function ProductTable({
               filteredProducts.push(products[j]);
             }
             break;
+            
+          default:// None
         }
       }
     }
