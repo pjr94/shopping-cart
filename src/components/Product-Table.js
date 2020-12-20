@@ -77,6 +77,7 @@ export default function ProductTable({
               reFilteredProducts.push(filteredProducts[i]);
             }
             break;
+          default: // None
         }
       }
     } else {
