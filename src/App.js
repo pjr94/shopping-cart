@@ -131,6 +131,7 @@ function App() {
         </div>
 
         <ProductTable
+          className="product-table"
           cartState={cartState}
           setCartState={setCartState}
           products={products}

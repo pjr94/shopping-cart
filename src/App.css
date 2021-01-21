@@ -35,6 +35,18 @@
   font-style: italic;
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  padding-top: -15px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 
 .size-selected{
   background-color: rgb(94, 191, 255);
@@ -53,7 +65,7 @@
 .cart{
   float: right;
   text-align: left;
-  width: 200px;
+  width: 300px;
   right: 0;
   position: fixed;
   padding: 5px;
@@ -77,8 +89,14 @@
 
 .range-slider{
   padding-top: 10px;
+  padding-right: 5px;
   margin-top: 10px;
   margin-left: 10px;
+
+}
+
+.product-table{
+  margin-top: 100px;
 }
 
 .delete{

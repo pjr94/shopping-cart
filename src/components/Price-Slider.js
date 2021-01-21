@@ -36,6 +36,7 @@ export default function PriceSlider({ priceState, setPriceState }) {
           step={50}
           onAfterChange={handleRangeChange}
           className="range-slider"
+
         />
       </Collapsible>
     </div>
