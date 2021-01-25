@@ -33,6 +33,7 @@ export default function ProductBox({ product, setCartState, cartState }) {
       <p>
         {product.size.map((size, index) => (
           <SizeButton
+            key={index}
             index={index}
             sizeState={sizeState}
             setSizeState={setSizeState}

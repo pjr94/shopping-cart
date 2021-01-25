@@ -1,13 +1,22 @@
 .app{
   display: flex;
+  align-items: stretch;
+  height: 100vh;
 }
 
+.filters-container{
+  align-items: stretch;
+  height: 100%;
+  width: 110px;
+  background-color: #C1D1A5;
+  padding-left: 5px;
+}
 
 .filters{
-  display: block;
-  padding-left: 5px;
-  width: 100px;
   
+ 
+
+
 }
 
 
@@ -28,7 +37,8 @@
 }
 
 .board-pic{
-  width: 150px;
+height: 192px;
+width: 150px;
 }
 
 .price{
@@ -49,7 +59,7 @@
 }
 
 .size-selected{
-  background-color: rgb(94, 191, 255);
+  background-color: #ABE2FB;
   border: 1px solid black;
   margin: 1px;
   cursor: pointer;
@@ -69,7 +79,7 @@
   right: 0;
   position: fixed;
   padding: 5px;
-  background-color: white;
+  background-color: #C1D1A5;
 }
 
 .add-cart{
@@ -92,7 +102,12 @@
   padding-right: 5px;
   margin-top: 10px;
   margin-left: 10px;
+  width: 80px !important ; /* have to use !important to get this to take precedence */
+}
 
+.underline-black{
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 
 .product-table{

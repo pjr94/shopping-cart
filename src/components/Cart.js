@@ -20,7 +20,7 @@ export default function Cart({ cartState, setCartState }){
         total = total + cartState[i].prod.price;
       }
     
-      const priceTotal = <p>View Cart Current total: £{total} <i class="arrow down"></i></p>
+      const priceTotal = <p className="underline-black">View Cart Current total: £{total} <i className="arrow down"></i></p>
 
       return (
         <div className="cart">

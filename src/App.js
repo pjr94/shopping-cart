@@ -13,6 +13,15 @@ import ProductTable from "./components/Product-Table"
 import FiltersBox from "./components/Filters-Box"
 import PriceSlider from "./components/Price-Slider"
 
+// Images have to be imported in React
+import Stalefish from "./images/Rome-StalefishSnowboard-2020-2021.png";
+import ServiceDog from "./images/Rome-ServiceDogSnowboard-Flip-2020-2021_600x.png";
+import StaleMod from "./images/Rome-StaleModSnowboard-2020-2021_920x.png";
+import National from "./images/Rome-NationalSnowboard-2020-2021_600x.png";
+import Heist from "./images/Rome-HeistSnowboard-Flip-2020-2021_600x.png";
+import Ravine from "./images/Rome-Women_sRavineSnowboard-Flip-2020-2021_600x.png";
+import Minishred from "./images/Rome-MinishredSnowboard-2020-2021_920x.png";
+
 // data
 const products = [
   {
@@ -21,8 +30,7 @@ const products = [
     price: 449.99,
     name: "Stalefish",
     size: [148, 153, 157],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-StalefishSnowboard-2020-2021.png?v=1599225319",
+    pic: Stalefish,
   },
   {
     catagory: "male",
@@ -30,8 +38,7 @@ const products = [
     price: 399.95,
     name: "Service Dog",
     size: [148, 153, 157],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-ServiceDogSnowboard-Flip-2020-2021_600x.png?v=1599223293",
+    pic: ServiceDog,
   },
   {
     catagory: "male",
@@ -39,8 +46,7 @@ const products = [
     price: 619.99,
     name: "stale mod",
     size: [156],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-StaleModSnowboard-2020-2021_920x.png?v=1601996097",
+    pic: StaleMod,
   },
   {
     catagory: "male",
@@ -48,7 +54,7 @@ const products = [
     price: 579.99,
     name: "national",
     size: [152, 154, "157w", "162w"],
-    pic: "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-NationalSnowboard-2020-2021_600x.png?v=1599220987",
+    pic: National,
   },
   {
     catagory: "female",
@@ -56,8 +62,7 @@ const products = [
     price: 399.99,
     name: "Heist",
     size: [139, 143, 147, 151],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-HeistSnowboard-Flip-2020-2021_600x.png?v=1599215465",
+    pic: Heist,
   },
   {
     catagory: "female",
@@ -65,8 +70,7 @@ const products = [
     price: 499.99,
     name: "Women's Ravine",
     size: [144, 147, 150, 153],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-Women_sRavineSnowboard-Flip-2020-2021_600x.png?v=1599227349",
+    pic: Ravine,
   },
   {
     catagory: "youth",
@@ -74,8 +78,7 @@ const products = [
     price: 199.99,
     name: "minishred",
     size: [100, 110, 120],
-    pic:
-      "https://cdn.shopify.com/s/files/1/0370/4055/4115/products/Rome-MinishredSnowboard-2020-2021_920x.png?v=1599220776",
+    pic: Minishred,
   },
 ];
 
@@ -113,10 +116,10 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="flex">
       <Cart cartState={cartState} setCartState={setCartState} />
       <div className="app">
-        <div>
+        <div className="filters-container">
           <FiltersBox
             name="Gender"
             catagory={gender}

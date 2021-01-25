@@ -11,13 +11,13 @@ import "../App.css"
 export default function FiltersBox({ name, catagory, handleState }) {
     // Index + 1 as 0 is all products
 
-    const title = <p>{name} <i class="arrow down"></i></p>
+    const title = <p className="underline-black">{name} <i className="arrow down"></i></p>
 
     return (
       <div className="filters">
-        <Collapsible trigger={title} open="true">
+        <Collapsible trigger={title} open={true}>
           {catagory.map((option, index) => (
-            <p>
+            <p key={index}>
               <Checkbox
                 onClick={() => {
                   handleState(index);
