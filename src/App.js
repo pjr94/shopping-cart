@@ -9,9 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 // https://www.npmjs.com/package/react-toastify
 
 import Cart from "./components/Cart";
-import ProductTable from "./components/Product-Table"
-import FiltersBox from "./components/Filters-Box"
-import PriceSlider from "./components/Price-Slider"
+import ProductTable from "./components/Product-Table";
+import FiltersBox from "./components/Filters-Box";
+import PriceSlider from "./components/Price-Slider";
 
 // Images have to be imported in React
 import Stalefish from "./images/Rome-StalefishSnowboard-2020-2021.png";
@@ -115,20 +115,31 @@ function App() {
     autoClose: 1000,
   });
 
+  const clearFilters = () => {
+    setGenderState([false, false, false]);
+    setShapeState([false, false, false]);
+    setPriceState([1, 750]);
+  };
+
   return (
     <div className="flex">
       <Cart cartState={cartState} setCartState={setCartState} />
       <div className="app">
         <div className="filters-container">
+          <button className="clear-button" onClick={() => clearFilters()}>
+            Clear Filters
+          </button>
           <FiltersBox
             name="Gender"
             catagory={gender}
             handleState={handleGenderState}
+            checked={genderState}
           />
           <FiltersBox
             name="Shape"
             catagory={shape}
             handleState={handleShapeState}
+            checked={shapeState}
           />
           <PriceSlider priceState={priceState} setPriceState={setPriceState} />
         </div>
